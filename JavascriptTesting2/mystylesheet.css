@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: aquamarine;
+}
+#initialButton {
+  font-size: 27px;
+  background-color: skyblue;
+}
+#initialButton:hover {
+  font-size: 28px;
+  background-color: rgb(80, 175, 213);
+}

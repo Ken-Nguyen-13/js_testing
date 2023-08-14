@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mystylesheet.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="buttonContainer">
+      <button id="initialButton" onclick="buttonFunction()">Click Here!</button>
+    </div>
+    <script>
+        const buttonText = [`Click Here!`, `Click Here Again!`, `Click Here One More Time`, `Click Here ONE More Time`, `Okay, You Get The Point`, `...`, `....`, `Uhh... So What Now?`, `How About DON'T Click Me?`, `Don't Click Me`, `Why Are You Still Doing This?`, `You Could Be Doing Something Productive Right Now`, `Seriously?`, `STOP CLICKING`, `I'm Running Out Of Things To Say`, `Fine. Whatever.`, `I Guess If You want To Click Me I can't Stop It So...`]
+        let textValue = -1;
+        function buttonFunction() {
+        textValue++
+        if (textValue > buttonText.length - 1) {
+          textValue = 0;
+        }
+        const createdButton = document.createElement(`button`);
+        createdButton.id = "newButton"
+        createdButton.setAttribute("onclick", "buttonFunction()");
+        createdButton.textContent = buttonText[textValue];
+        createdButton.style.fontSize = "27px";
+        createdButton.style.backgroundColor = "skyblue";
+        createdButton.style.marginLeft = "10px"
+        document.body.appendChild(createdButton);
+        }
+      // let number = 200;
+      // function halve(num) {
+      //   let result = num;
+      //   for (let i = 0; i <= 4; i++) {
+      //     result /= 2;
+      //   }
+      //   return result;
+      // }
+      ///console.log(halve(number))
+    </script>
+  </body>
+</html>

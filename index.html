@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="number">12</p>
+    <button id="button1" onclick="myFunction()">Click here!</button>
+    <script>
+      function myFunction() {
+        let arr = [];
+        let sumOfNums = 0;
+        let i = 1;
+        while (i < 11) {
+          arr.push(Math.trunc(Math.random() * 10 + 1));
+          i++;
+        }
+        for (let i = 0; i < arr.length; i++) {
+          sumOfNums += arr[i];
+        }
+        console.log(arr, sumOfNums);
+      }
+      const button = document.createElement("button");
+      button.innerText = "This is a button";
+      button.setAttribute("onclick", "hiFunction()");
+      function hiFunction() {
+        console.log(`hi`);
+      }
+      document.body.appendChild(button);
+      // const pete = {
+      //   firstmame: `Pete`,
+      //   fullname() {
+      //     return this.firstmame;
+      //   }
+      // }
+      // console.log(pete.firstmame = `Peter`, pete.fullname())
+    </script>
+  </body>
+</html>
